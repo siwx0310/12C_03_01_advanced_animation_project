@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astro Candles | configurator</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      #Shadow_Billede {
+        pointer-events: none;
+      }
+      .g_to_interact_with {
+        fill: transparent;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="configurator">
+      <div id="product-preview">
+        <!-- TODO: add all feature image layers -->
+        <div id="candle"></div>
+
+        <img
+          src=""
+          alt=""
+          class="hide"
+          id="sunglasses"
+          data-feature="sunglasses"
+        />
+        <img src="" alt="" class="hide" data-feature="bow" id="bow" />
+        <img src="" alt="" class="hide" data-feature="heart" id="heart" />
+        <img src="" alt="" class="hide" data-feature="mustache" id="mustache" />
+      </div>
+      <div id="options">
+        Available features
+        <figure class="option" data-feature="sunglasses">
+          <img src="" alt="Sunglasses" />
+          <figcaption>Sunglasses</figcaption>
+        </figure>
+        <figure class="option" data-feature="bow">
+          <img src="" alt="bow" />
+          <figcaption>Bow</figcaption>
+        </figure>
+        <figure class="option" data-feature="heart">
+          <img src="" alt="Heart" />
+          <figcaption>Heart</figcaption>
+        </figure>
+        <figure class="option" data-feature="mustache">
+          <img src="" alt="Mustache" />
+          <figcaption>Mustache</figcaption>
+        </figure>
+      </div>
+      <div id="selected">
+        Selected features
+        <ul>
+          <!-- featureElements are added here! -->
+        </ul>
+      </div>
+    </div>
+
+    <p>Click on an area and pick a color below to see the result:</p>
+    <div id="color_btns">
+      <svg viewBox="0 0 1000 300">
+        <rect class="color_btn" width="100" height="100" fill="#7A4520"></rect>
+        <rect
+          class="color_btn"
+          x="110"
+          width="100"
+          height="100"
+          fill="#F9B98B"
+        ></rect>
+        <rect
+          class="color_btn"
+          x="220"
+          width="100"
+          height="100"
+          fill="#F78D40"
+        ></rect>
+        <rect
+          class="color_btn"
+          x="330"
+          width="100"
+          height="100"
+          fill="#785943"
+        ></rect>
+        <rect
+          class="color_btn"
+          x="440"
+          width="100"
+          height="100"
+          fill="#C47033"
+        ></rect>
+        <rect
+          class="color_btn"
+          x="550"
+          width="100"
+          height="100"
+          fill="#7A4921"
+        ></rect>
+        <rect
+          class="color_btn"
+          x="660"
+          width="100"
+          height="100"
+          fill="#FFC391"
+        ></rect>
+        <rect
+          class="color_btn"
+          x="770"
+          width="100"
+          height="100"
+          fill="#F79443"
+        ></rect>
+        <rect
+          class="color_btn"
+          x="890"
+          width="100"
+          height="100"
+          fill="#C77736"
+        ></rect>
+      </svg>
+    </div>
+    <script>
+      "use strict";
+
+      document.addEventListener("DOMContentLoaded", start);
+      console.log("DOMContentLoaded");
+
+      async function start() {
+        let response = await fetch("candle/candle_svg_prep-01.svg");
+        let mySvgData = await response.text();
+        document.querySelector("#candle").innerHTML = mySvgData;
+        // register toggle-clicks
+        document
+          .querySelectorAll(".option")
+          .forEach((option) => option.addEventListener("click", toggleOption));
+        addUserInteraction();
+      }
+
+      function toggleOption() {}
+    </script>
+  </body>
+</html>
