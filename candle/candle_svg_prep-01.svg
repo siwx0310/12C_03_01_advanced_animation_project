@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 240 240">
-  <g class="g_to_interact_with" id="Wax" style="isolation: isolate">
-    <path d="M119.52,80.4h2.16a5,5,0,0,1,.24,1.68c8.68-.12,17.36,0,25.68.48,2.93.16,8.2-1,8.64,1.68.7,1.47-.46,11.3-.48,13.92,0,4.42.19,9.63-.72,13.68-.7,3.12,0,6.87-.72,9.84-1,4.47,0,9.25-1,13.44s.28,14.77-2.4,16.56c-3.86,2.58-10.92,0-16.32,1.2-4.75,1-11.33.24-16.56.24-6.53,0-14.41.81-20.16-.48-3.22-.72-6.82.11-9.84-.48v-.48c-.9-1.31-.3-3.12-.72-5-.78-3.58-.43-8-1.2-11.52v-3.6c-.73-3.36-.23-7.68-1-11v-3.84c-.72-3.33,0-7.57-.72-11-.8-3.72.38-8.51-.48-12.48-.63-2.92-.46-6.6-.48-9.84,11.59-.75,24.07-1.16,36-1.2Z" fill-rule="evenodd"/>
-  </g>
-  <g id="Shadow_Billede" data-name="Shadow Billede">
-    <image id="Shadow_Billede-2" data-name="Shadow Billede" width="353" height="428" transform="translate(77.52 67.92) scale(0.24)" xlink:href="candle/candle_svg_prep1.png"/>
-  </g>
-</svg>

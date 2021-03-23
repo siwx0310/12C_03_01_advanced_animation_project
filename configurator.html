@@ -5,140 +5,262 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Astro Candles | configurator</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-      #Shadow_Billede {
-        pointer-events: none;
-      }
-      .g_to_interact_with {
-        fill: transparent;
-        cursor: pointer;
-      }
-    </style>
+    <link rel="stylesheet" href="style_configurator.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div id="configurator">
-      <div id="product-preview">
-        <!-- TODO: add all feature image layers -->
-        <div id="candle"></div>
+    <header>
+      <!-- Globalmenu -->
+      <nav id="menu">
+        <!-- Burgermenu -->
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <!-- click logo -> goes to front page-->
+        <img id="logo" src="icons/logo_trans.png" alt="" />
 
-        <img
-          src=""
-          alt=""
-          class="hide"
-          id="sunglasses"
-          data-feature="sunglasses"
-        />
-        <img src="" alt="" class="hide" data-feature="bow" id="bow" />
-        <img src="" alt="" class="hide" data-feature="heart" id="heart" />
-        <img src="" alt="" class="hide" data-feature="mustache" id="mustache" />
+        <!-- shopping bag -->
+        <img id="bag" src="icons/19250417991537184110-128.png" alt="" />
+        <!-- Menupunkter -->
+        <div class="nav_links">
+          <a href="">scroll</a>
+          <a href="">Configurator</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="configurator">
+        <div id="container">
+          <div id="product_preview">
+            <!-- TODO: add candle image -->
+            <div id="candle"></div>
+            <!-- TODO: add all feature image layers -->
+
+            <img
+              src="features_new/aries_light1.png"
+              alt=""
+              class="zodiac_feature"
+              id="aries"
+              data-feature="aries"
+            />
+            <img
+              src="features_new/cancer_light1.png"
+              alt=""
+              class="hide zodiac_feature"
+              data-feature="cancer"
+              id="cancer"
+            />
+            <img
+              src="features_new/gemini_light1.png"
+              alt=""
+              class="hide zodiac_feature"
+              data-feature="gemini"
+              id="gemini"
+            />
+            <img
+              src=""
+              alt=""
+              class="hide zodiac_feature"
+              data-feature="leo"
+              id="leo"
+            />
+            <img
+              src=""
+              alt=""
+              class="hide zodiac_feature"
+              data-feature="taurus"
+              id="taurus"
+            />
+            <img
+              src=""
+              alt=""
+              class="hide zodiac_feature"
+              data-feature="aquarius"
+              id="aquarius"
+            />
+            <img
+              src=""
+              alt=""
+              class="hide zodiac_feature"
+              data-feature="libra"
+              id="libra"
+            />
+            <img
+              src=""
+              alt=""
+              class="hide zodiac_feature"
+              data-feature="pices"
+              id="pices"
+            />
+            <img
+              src=""
+              alt=""
+              class="hide zodiac_feature"
+              data-feature="sagittarius"
+              id="sagittarius"
+            />
+            <img
+              src=""
+              alt=""
+              class="hide zodiac_feature"
+              data-feature="scorpio"
+              id="scorpio"
+            />
+            <img
+              src=""
+              alt=""
+              class="hide zodiac_feature"
+              data-feature="taurus"
+              id="taurus"
+            />
+            <img
+              src=""
+              alt=""
+              class="hide zodiac_feature"
+              data-feature="virgo"
+              id="virgo"
+            />
+          </div>
+          <div id="options">
+            <div class="configurator_description">
+              <div class="configurator_name">
+                <h1>Astro Candle</h1>
+                <h2>499,-</h2>
+              </div>
+              <p>
+                Your new personalized candle with your zodiac sign. <br />
+                Choose quantity, zodiac signs, fragrance and colors
+              </p>
+            </div>
+            <div id="options_number">
+              <button id="button_number" class="button">
+                <div class="first_choise">1</div>
+                ── CHOOSE NUMBER OF CANDLES
+              </button>
+
+              <div id="option_number_choises" class="hide">
+                <a class="option_number" data-feature="one"> ONE </a>
+                <a class="option_number" data-feature="Two"> TWO </a>
+              </div>
+            </div>
+
+            <div id="options_zodiac">
+              <button id="button_zodiac" class="button">
+                <div class="first_choise">2</div>
+                ── CHOOSE ZODIAC SIGN
+              </button>
+
+              <div id="option_zodiac_choises" class="hide">
+                <a class="option_zodiac" data-feature="aries"> ARIES </a>
+                <a class="option_zodiac" data-feature="cancer"> CANCER </a>
+                <a class="option_zodiac" data-feature="gemini"> GEMINI </a>
+                <a class="option_zodiac" data-feature="leo"> LEO </a>
+                <a class="option_zodiac" data-feature="taurus"> TAURUS </a>
+                <a class="option_zodiac" data-feature="aquarius"> AQUARIUS </a>
+                <a class="option_zodiac" data-feature="libra"> LIBRA </a>
+                <a class="option_zodiac" data-feature="pices"> PICES </a>
+                <a class="option_zodiac" data-feature="sagittarius">
+                  SAGITTARIUS
+                </a>
+                <a class="option_zodiac" data-feature="scorpio"> SCORPIO </a>
+                <a class="option_zodiac" data-feature="virgo"> VIRGO </a>
+                <a class="option_zodiac" data-feature="capricorn">
+                  CAPRICORN
+                </a>
+              </div>
+            </div>
+
+            <div id="options_fragrance">
+              <button id="button_fragrance" class="button">
+                <div class="first_choise">3</div>
+                ── CHOOSE FRAGRANCE
+              </button>
+              <div id="option_fragrance_choises" class="hide">
+                <a class="option_fragrance" data-feature="rosemary">
+                  ROSEMARY
+                </a>
+                <a class="option_fragrance" data-feature="orange"> ORANGE </a>
+                <a class="option_fragrance" data-feature="jasmine"> JASMINE </a>
+                <a class="option_fragrance" data-feature="lavender">
+                  LAVENDER
+                </a>
+                <a class="option_fragrance" data-feature="sandalwood"
+                  >SANDALWOOD</a
+                >
+                <a class="option_fragrance" data-feature="mint"> MINT </a>
+                <a class="option_fragrance" data-feature="rose"> ROSE </a>
+                <a class="option_fragrance" data-feature="elderflower"
+                  >ELDERFLOWER</a
+                >
+                <a class="option_fragrance" data-feature="spruce"> SPRUCE </a>
+                <a class="option_fragrance" data-feature="patchouli">
+                  PATCHOULI
+                </a>
+                <a class="option_fragrance" data-feature="ginger"> GINGER </a>
+                <a class="option_fragrance" data-feature="coriander">
+                  CORIANDER
+                </a>
+                <a class="option_fragrance" data-feature="basil"> BASIL </a>
+                <a class="option_fragrance" data-feature="sage"> SAGE </a>
+                <a class="option_fragrance" data-feature="eucalyptus">
+                  EUCALYPTUS
+                </a>
+                <a class="option_fragrance" data-feature="citrus"> CITRUS </a>
+                <a class="option_fragrance" data-feature="cedar"> CEDAR </a>
+                <a class="option_fragrance" data-feature="pine"> PINE </a>
+                <a class="option_fragrance" data-feature="lemon"> LEMON </a>
+                <a class="option_fragrance" data-feature="basil"> BASIL </a>
+              </div>
+            </div>
+
+            <div id="color_btns">
+              <button id="button_color" class="button">
+                <div class="first_choise">4</div>
+                ── CHOOSE THE COLOR
+              </button>
+              <div id="option_color_choises" class="hide">
+                <svg viewBox="0 0 1000 300">
+                  <rect
+                    class="color_btn"
+                    width="100"
+                    height="100"
+                    fill="#7A4520"
+                  ></rect>
+                  <rect
+                    class="color_btn"
+                    x="110"
+                    width="100"
+                    height="100"
+                    fill="#F9B98B"
+                  ></rect>
+                  <rect
+                    class="color_btn"
+                    x="220"
+                    width="100"
+                    height="100"
+                    fill="#F78D40"
+                  ></rect>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="selected">
+          Selected features
+          <ul>
+            <!-- featureElements are added here! -->
+          </ul>
+        </div>
       </div>
-      <div id="options">
-        Available features
-        <figure class="option" data-feature="sunglasses">
-          <img src="" alt="Sunglasses" />
-          <figcaption>Sunglasses</figcaption>
-        </figure>
-        <figure class="option" data-feature="bow">
-          <img src="" alt="bow" />
-          <figcaption>Bow</figcaption>
-        </figure>
-        <figure class="option" data-feature="heart">
-          <img src="" alt="Heart" />
-          <figcaption>Heart</figcaption>
-        </figure>
-        <figure class="option" data-feature="mustache">
-          <img src="" alt="Mustache" />
-          <figcaption>Mustache</figcaption>
-        </figure>
-      </div>
-      <div id="selected">
-        Selected features
-        <ul>
-          <!-- featureElements are added here! -->
-        </ul>
-      </div>
-    </div>
+    </main>
+    <footer></footer>
 
-    <p>Click on an area and pick a color below to see the result:</p>
-    <div id="color_btns">
-      <svg viewBox="0 0 1000 300">
-        <rect class="color_btn" width="100" height="100" fill="#7A4520"></rect>
-        <rect
-          class="color_btn"
-          x="110"
-          width="100"
-          height="100"
-          fill="#F9B98B"
-        ></rect>
-        <rect
-          class="color_btn"
-          x="220"
-          width="100"
-          height="100"
-          fill="#F78D40"
-        ></rect>
-        <rect
-          class="color_btn"
-          x="330"
-          width="100"
-          height="100"
-          fill="#785943"
-        ></rect>
-        <rect
-          class="color_btn"
-          x="440"
-          width="100"
-          height="100"
-          fill="#C47033"
-        ></rect>
-        <rect
-          class="color_btn"
-          x="550"
-          width="100"
-          height="100"
-          fill="#7A4921"
-        ></rect>
-        <rect
-          class="color_btn"
-          x="660"
-          width="100"
-          height="100"
-          fill="#FFC391"
-        ></rect>
-        <rect
-          class="color_btn"
-          x="770"
-          width="100"
-          height="100"
-          fill="#F79443"
-        ></rect>
-        <rect
-          class="color_btn"
-          x="890"
-          width="100"
-          height="100"
-          fill="#C77736"
-        ></rect>
-      </svg>
-    </div>
-    <script>
-      "use strict";
-
-      document.addEventListener("DOMContentLoaded", start);
-      console.log("DOMContentLoaded");
-
-      async function start() {
-        let response = await fetch("candle/candle_svg_prep-01.svg");
-        let mySvgData = await response.text();
-        document.querySelector("#candle").innerHTML = mySvgData;
-        // register toggle-clicks
-        document
-          .querySelectorAll(".option")
-          .forEach((option) => option.addEventListener("click", toggleOption));
-        addUserInteraction();
-      }
-
-      function toggleOption() {}
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
