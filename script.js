@@ -2,17 +2,50 @@
 
 const featuresCandle1 = {
   aries: false,
+  aries2: false,
+  aries3: false,
+  aries4: false,
   cancer: false,
+  cancer2: false,
+  cancer3: false,
+  cancer4: false,
   gemini: false,
+  gemini2: false,
+  gemini3: false,
+  gemini4: false,
   leo: false,
+  leo2: false,
+  leo3: false,
+  leo4: false,
   taurus: false,
+  taurus2: false,
+  taurus3: false,
+  taurus4: false,
   aquarius: false,
+  aquarius2: false,
+  aquarius3: false,
+  aquarius4: false,
   libra: false,
+  libra2: false,
+  libra3: false,
+  libra4: false,
   pices: false,
   sagittarius: false,
+  sagittarius2: false,
+  sagittarius3: false,
+  sagittarius4: false,
   scorpio: false,
+  scorpio2: false,
+  scorpio3: false,
+  scorpio4: false,
   virgo: false,
+  virgo2: false,
+  virgo3: false,
+  virgo4: false,
   capricorn: false,
+  capricorn2: false,
+  capricorn3: false,
+  capricorn4: false,
 };
 
 const candles = {
@@ -35,12 +68,12 @@ async function start() {
     .forEach((option) => option.addEventListener("click", toggleOption));
 
   dropDownMenu();
-  userInteraction();
+  userInteractionOnButtons();
 }
 
-function userInteraction() {
+function userInteractionOnButtons() {
   /* mouseover on all buttons*/
-  document.querySelectorAll(".button").forEach((button) =>
+  document.querySelectorAll(".buttons").forEach((button) =>
     button.addEventListener("mouseover", () => {
       console.log("mouseover");
       button.style.backgroundColor = "#cfcfcf";
@@ -90,6 +123,64 @@ function userInteraction() {
     const numberChoises = document.querySelector("#option_number_choises");
     numberChoises.classList.toggle("hide");
   });
+
+  document.querySelector("#first_candle").addEventListener("click", () => {
+    if (candles[first_candle] != true) {
+      console.log("first candle = true");
+      candles[first_candle] = true;
+      document.querySelector("#first_zodiac_label").classList.remove("hide");
+      document.querySelector("#first_candle").style.backgroundColor = "#32a852";
+    } else {
+      console.log("first candle = false");
+      document.querySelector("#first_zodiac_label").classList.add("hide");
+      document.querySelector("#first_candle").style.backgroundColor = "#EEE";
+      candles[first_candle] = false;
+    }
+  });
+
+  document.querySelector("#second_candle").addEventListener("click", () => {
+    if (candles[second_candle] != true) {
+      console.log("second candle = true");
+      candles[second_candle] = true;
+      document.querySelector("#second_zodiac_label").classList.remove("hide");
+      document.querySelector("#second_candle").style.backgroundColor =
+        "#32a852";
+    } else {
+      console.log("second candle = false");
+      candles[second_candle] = false;
+      document.querySelector("#second_zodiac_label").classList.add("hide");
+      document.querySelector("#second_candle").style.backgroundColor = "#EEE";
+    }
+  });
+
+  document.querySelector("#third_candle").addEventListener("click", () => {
+    if (candles[third_candle] != true) {
+      console.log("third candle = true");
+      candles[third_candle] = true;
+      document.querySelector("#third_zodiac_label").classList.remove("hide");
+      document.querySelector("#third_candle").style.backgroundColor = "#32a852";
+    } else {
+      console.log("third candle = false");
+      candles[third_candle] = false;
+      document.querySelector("#third_zodiac_label").classList.add("hide");
+      document.querySelector("#third_candle").style.backgroundColor = "#EEE";
+    }
+  });
+
+  document.querySelector("#fourth_candle").addEventListener("click", () => {
+    if (candles[fourth_candle] != true) {
+      console.log("fourth candle = true");
+      candles[fourth_candle] = true;
+      document.querySelector("#fourth_zodiac_label").classList.remove("hide");
+      document.querySelector("#fourth_candle").style.backgroundColor =
+        "#32a852";
+    } else {
+      console.log("fourth candle = false");
+      candles[fourth_candle] = false;
+      document.querySelector("#fourth_zodiac_label").classList.add("hide");
+      document.querySelector("#fourth_candle").style.backgroundColor = "#EEE";
+    }
+  });
 }
 
 /* navigation menu / burger menu */
@@ -118,8 +209,21 @@ function toggleOption(event) {
   // TODO: Toggle feature in "model"
   featuresCandle1[feature] = !featuresCandle1[feature];
 
-  // TODO: - mark target as chosen (add class "chosen")
+  if (featuresCandle1[feature] === true) {
+    // TODO: - mark target as chosen (add class "chosen")
 
-  // - un-hide the feature-layer(s) in the #product-preview;
-  document.querySelector(`[data-feature="${feature}"`).classList.remove("hide");
+    //TODO: select target candle.
+
+    // - un-hide the feature-layer(s) in the #product-preview;
+    console.log(`${feature}`);
+    document
+      .querySelector(`[data-feature="${feature}"`)
+      .classList.remove("hide");
+  } else {
+    document.querySelector(`[data-feature=${feature}`).classList.add("hide");
+  }
+
+  /*
+
+  */
 }
