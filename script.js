@@ -15,6 +15,13 @@ const featuresCandle1 = {
   capricorn: false,
 };
 
+const candles = {
+  first_candle: false,
+  second_candle: false,
+  third_candle: false,
+  fourth_candle: false,
+};
+
 document.addEventListener("DOMContentLoaded", start);
 console.log("DOMContentLoaded");
 
@@ -24,14 +31,14 @@ async function start() {
   document.querySelector("#candle").innerHTML = mySvgData;
   // register toggle-clicks
   document
-    .querySelectorAll(".option")
+    .querySelectorAll(".option_zodiac")
     .forEach((option) => option.addEventListener("click", toggleOption));
 
   dropDownMenu();
-  addEventListeners();
+  userInteraction();
 }
 
-function addEventListeners() {
+function userInteraction() {
   /* mouseover on all buttons*/
   document.querySelectorAll(".button").forEach((button) =>
     button.addEventListener("mouseover", () => {
@@ -104,4 +111,15 @@ function dropDownMenu() {
   });
 }
 
-function toggleOption() {}
+function toggleOption(event) {
+  const target = event.currentTarget;
+  const feature = target.dataset.feature;
+
+  // TODO: Toggle feature in "model"
+  featuresCandle1[feature] = !featuresCandle1[feature];
+
+  // TODO: - mark target as chosen (add class "chosen")
+
+  // - un-hide the feature-layer(s) in the #product-preview;
+  document.querySelector(`[data-feature="${feature}"`).classList.remove("hide");
+}
