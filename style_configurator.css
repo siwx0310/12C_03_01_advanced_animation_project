@@ -141,6 +141,8 @@ button:focus {
 
 #options {
   background-color: white;
+  overflow-y: scroll;
+  height: 100vh;
 }
 
 /* javacript classes*/
