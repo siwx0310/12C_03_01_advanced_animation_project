@@ -1,6 +1,6 @@
 "use strict";
 
-const featuresCandle1 = {
+const features = {
   aries: false,
   aries2: false,
   aries3: false,
@@ -51,6 +51,10 @@ const featuresCandle1 = {
 let fragrance1 = document.querySelector("#fragrance1");
 let fragrance2 = document.querySelector("#fragrance2");
 let fragrance3 = document.querySelector("#fragrance3");
+let candle1 = document.querySelector("#candle1");
+let candle2 = document.querySelector("#candle2");
+let candle3 = document.querySelector("#candle3");
+let candle4 = document.querySelector("#candle4");
 
 const leoFragrance = ["ROSEMARY", "ORANGE", "JASMINE"];
 const virgoFragrance = ["LAVENDER", "SANDALWOOD", "MINT"];
@@ -110,13 +114,6 @@ function userInteractionOnButtons() {
       });
     })
   );
-
-  /* toggle on color button */
-  document.querySelector("#button_color").addEventListener("click", () => {
-    //console.log("toggle color choises");
-    const colorChoises = document.querySelector("#option_color_choises");
-    colorChoises.classList.toggle("hide");
-  });
 
   /* toggle on zodiac button */
   document.querySelector("#button_zodiac").addEventListener("click", () => {
@@ -215,9 +212,9 @@ function toggleOptionZodiac(event) {
   const feature = target.dataset.feature;
 
   // TODO: Toggle feature in "model"
-  featuresCandle1[feature] = !featuresCandle1[feature];
+  features[feature] = !features[feature];
 
-  if (featuresCandle1[feature] === true) {
+  if (features[feature] === true) {
     // TODO: - mark target as chosen (add class "chosen")
 
     // - un-hide the feature-layer(s) in the #product-preview;
@@ -227,53 +224,66 @@ function toggleOptionZodiac(event) {
       .classList.remove("hide");
 
     // TODO: display selected zodiac feature fragrance
-    if (feature === "leo") {
+    if (feature.includes("leo")) {
       console.log("feature = leo");
       fragrance1.innerHTML = `${leoFragrance[0]}`;
+      fragrance1.setAttribute("data-feature", "fragrance1leo");
       fragrance2.innerHTML = `${leoFragrance[1]}`;
+      fragrance2.setAttribute("data-feature", "fragrance2leo");
       fragrance3.innerHTML = `${leoFragrance[2]}`;
-    } else if (feature === "virgo") {
+      fragrance3.setAttribute("data-feature", "fragrance3leo");
+    } else if (feature.includes("virgo")) {
       console.log("feature = virgo");
       fragrance1.innerHTML = `${virgoFragrance[0]}`;
       fragrance2.innerHTML = `${virgoFragrance[1]}`;
       fragrance3.innerHTML = `${virgoFragrance[2]}`;
-    } else if (feature === "libra") {
+    } else if (feature.includes("libra")) {
+      console.log("feature = libra");
       fragrance1.innerHTML = `${libraFragrance[0]}`;
       fragrance2.innerHTML = `${libraFragrance[1]}`;
       fragrance3.innerHTML = `${libraFragrance[2]}`;
-    } else if (feature === "scorpio") {
+    } else if (feature.includes("scorpio")) {
+      console.log("feature = scorpio");
       fragrance1.innerHTML = `${scorpioFragrance[0]}`;
       fragrance2.innerHTML = `${scorpioFragrance[1]}`;
       fragrance3.innerHTML = `${scorpioFragrance[2]}`;
-    } else if (feature === "sagittarius") {
+    } else if (feature.includes("sagittarius")) {
+      console.log("feature = sagittarius");
       fragrance1.innerHTML = `${sagittariusFragrance[0]}`;
       fragrance2.innerHTML = `${sagittariusFragrance[1]}`;
       fragrance3.innerHTML = `${sagittariusFragrance[2]}`;
-    } else if (feature === "capricorn") {
+    } else if (feature.includes("capricorn")) {
+      console.log("feature = capricorn");
       fragrance1.innerHTML = `${capricornFragrance[0]}`;
       fragrance2.innerHTML = `${capricornFragrance[1]}`;
       fragrance3.innerHTML = `${capricornFragrance[2]}`;
-    } else if (feature === "aquarius") {
+    } else if (feature.includes("aquarius")) {
+      console.log("feature = aquarius");
       fragrance1.innerHTML = `${aquariusFragrance[0]}`;
       fragrance2.innerHTML = `${aquariusFragrance[1]}`;
       fragrance3.innerHTML = `${aquariusFragrance[2]}`;
-    } else if (feature === "pices") {
+    } else if (feature.includes("pices")) {
+      console.log("feature = pices");
       fragrance1.innerHTML = `${picesFragrance[0]}`;
       fragrance2.innerHTML = `${picesFragrance[1]}`;
       fragrance3.innerHTML = `${picesFragrance[2]}`;
-    } else if (feature === "aries") {
+    } else if (feature.includes("aries")) {
+      console.log("feature = aries");
       fragrance1.innerHTML = `${ariesFragrance[0]}`;
       fragrance2.innerHTML = `${ariesFragrance[1]}`;
       fragrance3.innerHTML = `${ariesFragrance[2]}`;
-    } else if (feature === "taurus") {
+    } else if (feature.includes("taurus")) {
+      console.log("feature = taurus");
       fragrance1.innerHTML = `${taurusFragrance[0]}`;
       fragrance2.innerHTML = `${taurusFragrance[1]}`;
       fragrance3.innerHTML = `${taurusFragrance[2]}`;
-    } else if (feature === "gemini") {
+    } else if (feature.includes("gemini")) {
+      console.log("feature = gemini");
       fragrance1.innerHTML = `${geminiFragrance[0]}`;
       fragrance2.innerHTML = `${geminiFragrance[1]}`;
       fragrance3.innerHTML = `${geminiFragrance[2]}`;
-    } else if (feature === "cancer") {
+    } else if (feature.includes("cancer")) {
+      console.log("feature = cancer");
       fragrance1.innerHTML = `${cancerFragrance[0]}`;
       fragrance2.innerHTML = `${cancerFragrance[1]}`;
       fragrance3.innerHTML = `${cancerFragrance[2]}`;
@@ -288,8 +298,23 @@ function toggleOptionZodiac(event) {
           "#option_fragrance_choises"
         );
         fragranceChoises.classList.toggle("hide");
+
+        fragrance1.addEventListener("click", fragranceColor);
       });
   } else {
     document.querySelector(`[data-feature=${feature}`).classList.add("hide");
   }
+}
+
+function fragranceColor() {
+  console.log("fragrance color 1");
+
+  /* toggle on color button */
+  document.querySelector("#button_color").addEventListener("click", () => {
+    //console.log("toggle color choises");
+    const colorChoises = document.querySelector("#option_color_choises");
+    fragrance1.addEventListener("click", () => {
+      candle1.innerHTML = `${fragrance1.innerHTML}`;
+    });
+  });
 }
