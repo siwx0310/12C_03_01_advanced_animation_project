@@ -65,7 +65,7 @@ async function start() {
   // register toggle-clicks
   document
     .querySelectorAll(".option_zodiac")
-    .forEach((option) => option.addEventListener("click", toggleOption));
+    .forEach((option) => option.addEventListener("click", toggleOptionZodiac));
 
   dropDownMenu();
   userInteractionOnButtons();
@@ -75,7 +75,7 @@ function userInteractionOnButtons() {
   /* mouseover on all buttons*/
   document.querySelectorAll(".buttons").forEach((button) =>
     button.addEventListener("mouseover", () => {
-      console.log("mouseover");
+      // console.log("mouseover");
       button.style.backgroundColor = "#cfcfcf";
       button.addEventListener("mouseout", () => {
         button.style.backgroundColor = "#EEE";
@@ -86,7 +86,7 @@ function userInteractionOnButtons() {
   /* mouseout on all buttons*/
   document.querySelectorAll("a").forEach((a) =>
     a.addEventListener("mouseover", () => {
-      console.log("mouseover");
+      // console.log("mouseover");
       a.style.backgroundColor = "#cfcfcf";
       a.addEventListener("mouseout", () => {
         a.style.backgroundColor = "white";
@@ -96,7 +96,7 @@ function userInteractionOnButtons() {
 
   /* toggle on fragrance button button*/
   document.querySelector("#button_fragrance").addEventListener("click", () => {
-    console.log("toggle fragrance choises");
+    //console.log("toggle fragrance choises");
     const fragranceChoises = document.querySelector(
       "#option_fragrance_choises"
     );
@@ -105,21 +105,21 @@ function userInteractionOnButtons() {
 
   /* toggle on color button */
   document.querySelector("#button_color").addEventListener("click", () => {
-    console.log("toggle color choises");
+    //console.log("toggle color choises");
     const colorChoises = document.querySelector("#option_color_choises");
     colorChoises.classList.toggle("hide");
   });
 
   /* toggle on zodiac button */
   document.querySelector("#button_zodiac").addEventListener("click", () => {
-    console.log("toggle zodiac choises");
+    //console.log("toggle zodiac choises");
     const zodiacChoises = document.querySelector("#option_zodiac_choises");
     zodiacChoises.classList.toggle("hide");
   });
 
   /* toggle on number button*/
   document.querySelector("#button_number").addEventListener("click", () => {
-    console.log("toggle number of candles choises");
+    //console.log("toggle number of candles choises");
     const numberChoises = document.querySelector("#option_number_choises");
     numberChoises.classList.toggle("hide");
   });
@@ -202,7 +202,7 @@ function dropDownMenu() {
   });
 }
 
-function toggleOption(event) {
+function toggleOptionZodiac(event) {
   const target = event.currentTarget;
   const feature = target.dataset.feature;
 
@@ -212,18 +212,15 @@ function toggleOption(event) {
   if (featuresCandle1[feature] === true) {
     // TODO: - mark target as chosen (add class "chosen")
 
-    //TODO: select target candle.
-
     // - un-hide the feature-layer(s) in the #product-preview;
     console.log(`${feature}`);
     document
       .querySelector(`[data-feature="${feature}"`)
       .classList.remove("hide");
+    toggleOptionFragrance();
   } else {
     document.querySelector(`[data-feature=${feature}`).classList.add("hide");
   }
-
-  /*
-
-  */
 }
+
+function toggleOptionFragrance() {}
