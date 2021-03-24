@@ -17,4 +17,8 @@
 	c14-45.8,21-288.1,21-288.1S2095.5,460.3,1911.4,466.5z"/>
 <image style="overflow:visible;opacity:0.5;enable-background:new;" width="1856" height="425" id="shadow" xlink:href="candle/F1075D7F7374D47D.png"  transform="matrix(1 0 0 1 386.1642 409.4215)">
 </image>
+<image style="overflow:visible;opacity:0.5;enable-background:new;" width="1856" height="425" id="shadow1" xlink:href="candle/F1075D7F7374D47D.png"  transform="matrix(1 0 0 1 386.1642 409.4215)">
+</image>
+<image style="overflow:visible;opacity:0.5;enable-background:new;" width="1856" height="425" id="shadow2" xlink:href="candle/F1075D7F7374D47D.png"  transform="matrix(1 0 0 1 386.1642 409.4215)">
+</image>
 </svg>
