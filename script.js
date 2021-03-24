@@ -55,6 +55,7 @@ let candle1 = document.querySelector("#candle1");
 let candle2 = document.querySelector("#candle2");
 let candle3 = document.querySelector("#candle3");
 let candle4 = document.querySelector("#candle4");
+let buttoncandl = document.querySelector("button");
 
 const leoFragrance = ["ROSEMARY", "ORANGE", "JASMINE"];
 const virgoFragrance = ["LAVENDER", "SANDALWOOD", "MINT"];
@@ -69,12 +70,10 @@ const taurusFragrance = ["ROSE", "SPRUCE", "PATCHOULI"];
 const geminiFragrance = ["LAVENDER", "CITRUS", "BASIL"];
 const cancerFragrance = ["JASMINE", "SANDALWOOD", "EUCALYPTUS"];
 
-const candles = {
-  first_candle: false,
-  second_candle: false,
-  third_candle: false,
-  fourth_candle: false,
-};
+let first_candle = false;
+let second_candle = false;
+let third_candle = false;
+let fourth_candle = false;
 
 document.addEventListener("DOMContentLoaded", start);
 console.log("DOMContentLoaded");
@@ -130,58 +129,65 @@ function userInteractionOnButtons() {
   });
 
   document.querySelector("#first_candle").addEventListener("click", () => {
-    if (candles[first_candle] != true) {
-      console.log("first candle = true");
-      candles[first_candle] = true;
+    if (first_candle != true) {
+      first_candle = true;
+      console.log(`1 = ${first_candle}`);
+
       document.querySelector("#first_zodiac_label").classList.remove("hide");
       document.querySelector("#first_candle").style.backgroundColor = "#32a852";
     } else {
-      console.log("first candle = false");
       document.querySelector("#first_zodiac_label").classList.add("hide");
       document.querySelector("#first_candle").style.backgroundColor = "#EEE";
-      candles[first_candle] = false;
+      first_candle = false;
+      console.log(`1 = ${first_candle}`);
     }
   });
 
   document.querySelector("#second_candle").addEventListener("click", () => {
-    if (candles[second_candle] != true) {
-      console.log("second candle = true");
-      candles[second_candle] = true;
+    if (second_candle != true) {
+      second_candle = true;
+      console.log(`2 = ${second_candle}`);
+
       document.querySelector("#second_zodiac_label").classList.remove("hide");
       document.querySelector("#second_candle").style.backgroundColor =
         "#32a852";
     } else {
-      console.log("second candle = false");
-      candles[second_candle] = false;
+      second_candle = false;
+      console.log(`2 = ${second_candle}`);
+
       document.querySelector("#second_zodiac_label").classList.add("hide");
       document.querySelector("#second_candle").style.backgroundColor = "#EEE";
     }
   });
 
   document.querySelector("#third_candle").addEventListener("click", () => {
-    if (candles[third_candle] != true) {
-      console.log("third candle = true");
-      candles[third_candle] = true;
+    if (third_candle != true) {
+      third_candle = true;
+      console.log(`3 = ${third_candle}`);
+
       document.querySelector("#third_zodiac_label").classList.remove("hide");
       document.querySelector("#third_candle").style.backgroundColor = "#32a852";
     } else {
-      console.log("third candle = false");
-      candles[third_candle] = false;
+      third_candle = false;
+      console.log(`3 = ${third_candle}`);
+
       document.querySelector("#third_zodiac_label").classList.add("hide");
       document.querySelector("#third_candle").style.backgroundColor = "#EEE";
     }
   });
 
   document.querySelector("#fourth_candle").addEventListener("click", () => {
-    if (candles[fourth_candle] != true) {
-      console.log("fourth candle = true");
-      candles[fourth_candle] = true;
+    if (fourth_candle != true) {
+      fourth_candle = true;
+      console.log(`4 = ${fourth_candle}`);
+
       document.querySelector("#fourth_zodiac_label").classList.remove("hide");
       document.querySelector("#fourth_candle").style.backgroundColor =
         "#32a852";
     } else {
-      console.log("fourth candle = false");
-      candles[fourth_candle] = false;
+      fourth_candle = false;
+      console.log(`4 = ${fourth_candle}`);
+
       document.querySelector("#fourth_zodiac_label").classList.add("hide");
       document.querySelector("#fourth_candle").style.backgroundColor = "#EEE";
     }
@@ -299,10 +305,64 @@ function toggleOptionZodiac(event) {
         );
         fragranceChoises.classList.toggle("hide");
 
-        fragrance1.addEventListener("click", fragranceColor);
+        //fragrance1.addEventListener("click", fragranceColor);
+        document
+          .querySelector("#fragrance1")
+          .addEventListener("click", displayFragrance1);
+        document
+          .querySelector("#fragrance2")
+          .addEventListener("click", displayFragrance2);
+        document
+          .querySelector("#fragrance3")
+          .addEventListener("click", displayFragrance3);
       });
   } else {
     document.querySelector(`[data-feature=${feature}`).classList.add("hide");
+  }
+}
+
+function displayFragrance1() {
+  console.log("display fragrance");
+  if (first_candle === true) {
+    candle1.innerHTML = `${fragrance1.innerHTML}`;
+  } else if (second_candle === true) {
+    candle2.innerHTML = `${fragrance1.innerHTML}`;
+  } else if (third_candle === true) {
+    candle3.innerHTML = `${fragrance1.innerHTML}`;
+  } else if (fourth_candle === true) {
+    candle4.innerHTML = `${fragrance1.innerHTML}`;
+  } else {
+    console.log("none of the candles has been chosen");
+  }
+}
+
+function displayFragrance2() {
+  console.log("display fragrance");
+  if (first_candle === true) {
+    candle1.innerHTML = `${fragrance2.innerHTML}`;
+  } else if (second_candle === true) {
+    candle2.innerHTML = `${fragrance2.innerHTML}`;
+  } else if (third_candle === true) {
+    candle3.innerHTML = `${fragrance2.innerHTML}`;
+  } else if (fourth_candle === true) {
+    candle4.innerHTML = `${fragrance2.innerHTML}`;
+  } else {
+    console.log("none of the candles has been chosen");
+  }
+}
+
+function displayFragrance3() {
+  console.log("display fragrance");
+  if (first_candle === true) {
+    candle1.innerHTML = `${fragrance3.innerHTML}`;
+  } else if (second_candle === true) {
+    candle2.innerHTML = `${fragrance3.innerHTML}`;
+  } else if (third_candle === true) {
+    candle3.innerHTML = `${fragrance3.innerHTML}`;
+  } else if (fourth_candle === true) {
+    candle4.innerHTML = `${fragrance3.innerHTML}`;
+  } else {
+    console.log("none of the candles has been chosen");
   }
 }
 
@@ -313,8 +373,6 @@ function fragranceColor() {
   document.querySelector("#button_color").addEventListener("click", () => {
     //console.log("toggle color choises");
     const colorChoises = document.querySelector("#option_color_choises");
-    fragrance1.addEventListener("click", () => {
-      candle1.innerHTML = `${fragrance1.innerHTML}`;
-    });
+    fragrance1.addEventListener("click", () => {});
   });
 }
