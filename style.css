@@ -3,7 +3,6 @@ header {
   position: fixed;
   top: 0;
   width: 100vw;
-
   z-index: 10;
 }
 
@@ -80,7 +79,6 @@ header {
 
 .line2 {
   width: 24px;
-  margin: ;
 }
 
 .line3 {
