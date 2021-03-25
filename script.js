@@ -70,24 +70,24 @@ const taurusFragrance = ["ROSE", "SPRUCE", "PATCHOULI"];
 const geminiFragrance = ["LAVENDER", "CITRUS", "BASIL"];
 const cancerFragrance = ["JASMINE", "SANDALWOOD", "EUCALYPTUS"];
 
-const LEMON = ["#fcd360", "#fcba00", "#b08202"];
-const ROSEMARY = ["#636659", "#afbbb3", "#97a389"];
-const ORANGE = ["#ffd97a", "#ffb600", "#c28a00"];
-const JASMINE = ["#ffd97a", "#ffb600", "#c28a00"];
-const LAVENDER = ["#f2ccff", "#dd78ff", "#9d37bf"];
-const SANDALWOOD = ["#8d5851", "#b8917b", "#ccb2a3"];
-const MINT = ["#a3ccb5", "#6ce6a1", "#6ee6da"];
-const ROSE = ["#ffbdd1", "#fa87aa", "#fa87aa"];
-const ELDERFLOWER = ["#fff0bd", "#ffe17a", "#fff8ed"];
-const SPRUCE = ["#79ba96", "#3b7856", "#70917f"];
-const PATCHOULI = ["#c2939a", "#fcb8c2", "#d19784"];
-const GINGER = ["#ffad61", "#ff8f26", "#bf6930"];
-const CORIANDER = ["#8da259", "#blc18e", "#486a4f"];
-const BASIL = ["#6cc25f", "#2c7d1f", "#1ba305"];
-const SAGE = ["#6cd9b3", "#6cd984", "#6cd9ca"];
-const EUCALYPTUS = ["#6cd9b3", "#6cd984", "#6cd9ca"];
-const CEDAR = ["#ffad61", "#ff8f26", "#bf6930"];
-const CITRUS = ["#fcd360", "#fcba00", "#b08202"];
+const lemon = ["#fcd360", "#fcba00", "#b08202"];
+const rosemary = ["#636659", "#afbbb3", "#97a389"];
+const orange = ["#ffd97a", "#ffb600", "#c28a00"];
+const jasmine = ["#ffd97a", "#ffb600", "#c28a00"];
+const lavender = ["#f2ccff", "#dd78ff", "#9d37bf"];
+const sandalwood = ["#8d5851", "#b8917b", "#ccb2a3"];
+const mint = ["#a3ccb5", "#6ce6a1", "#6ee6da"];
+const rose = ["#ffbdd1", "#fa87aa", "#fa87aa"];
+const elderflower = ["#fff0bd", "#ffe17a", "#fff8ed"];
+const spruce = ["#79ba96", "#3b7856", "#70917f"];
+const patchouli = ["#c2939a", "#fcb8c2", "#d19784"];
+const ginger = ["#ffad61", "#ff8f26", "#bf6930"];
+const coriander = ["#8da259", "#blc18e", "#486a4f"];
+const basil = ["#6cc25f", "#2c7d1f", "#1ba305"];
+const sage = ["#6cd9b3", "#6cd984", "#6cd9ca"];
+const eucalyptus = ["#6cd9b3", "#6cd984", "#6cd9ca"];
+const cedar = ["#ffad61", "#ff8f26", "#bf6930"];
+const citrus = ["#fcd360", "#fcba00", "#b08202"];
 
 const color1 = document.querySelector(".color1");
 const color2 = document.querySelector(".color2");
@@ -343,24 +343,12 @@ function displayFragrance1() {
 
   if (first_candle === true) {
     candle1.innerHTML = `${fragrance1.innerHTML}`;
-    color1.setAttribute("fill", `${ELDERFLOWER[0]}`);
-    color2.setAttribute("fill", `${ELDERFLOWER[1]}`);
-    color3.setAttribute("fill", `${ELDERFLOWER[2]}`);
   } else if (second_candle === true) {
     candle2.innerHTML = `${fragrance1.innerHTML}`;
-    color1.setAttribute("fill", `${fragrance1[0]}`);
-    color2.setAttribute("fill", `${fragrance1[1]}`);
-    color3.setAttribute("fill", `${fragrance1[2]}`);
   } else if (third_candle === true) {
     candle3.innerHTML = `${fragrance1.innerHTML}`;
-    color1.setAttribute("fill", `${fragrance1[0]}`);
-    color2.setAttribute("fill", `${fragrance1[1]}`);
-    color3.setAttribute("fill", `${fragrance1[2]}`);
   } else if (fourth_candle === true) {
     candle4.innerHTML = `${fragrance1.innerHTML}`;
-    color1.setAttribute("fill", `${fragrance1[0]}`);
-    color2.setAttribute("fill", `${fragrance1[1]}`);
-    color3.setAttribute("fill", `${fragrance1[2]}`);
   } else {
     console.log("none of the candles has been chosen");
   }
@@ -371,24 +359,12 @@ function displayFragrance2() {
   console.log("display fragrance");
   if (first_candle === true) {
     candle1.innerHTML = `${fragrance2.innerHTML}`;
-    color1.setAttribute("fill", `${fragrance2.innerHTML[0]}`);
-    color2.setAttribute("fill", `${fragrance2.innerHTML[1]}`);
-    color3.setAttribute("fill", `${fragrance2.innerHTML[2]}`);
   } else if (second_candle === true) {
     candle2.innerHTML = `${fragrance2.innerHTML}`;
-    color1.setAttribute("fill", `${fragrance2.innerHTML[0]}`);
-    color2.setAttribute("fill", `${fragrance2.innerHTML[1]}`);
-    color3.setAttribute("fill", `${fragrance2.innerHTML[2]}`);
   } else if (third_candle === true) {
     candle3.innerHTML = `${fragrance2.innerHTML}`;
-    color1.setAttribute("fill", `${fragrance2.innerHTML[0]}`);
-    color2.setAttribute("fill", `${fragrance2.innerHTML[1]}`);
-    color3.setAttribute("fill", `${fragrance2.innerHTML[2]}`);
   } else if (fourth_candle === true) {
     candle4.innerHTML = `${fragrance2.innerHTML}`;
-    color1.setAttribute("fill", `${fragrance2.innerHTML[0]}`);
-    color2.setAttribute("fill", `${fragrance2.innerHTML[1]}`);
-    color3.setAttribute("fill", `${fragrance2.innerHTML[2]}`);
   } else {
     console.log("none of the candles has been chosen");
   }
@@ -399,24 +375,12 @@ function displayFragrance3() {
   console.log("display fragrance");
   if (first_candle === true) {
     candle1.innerHTML = `${fragrance3.innerHTML}`;
-    color1.setAttribute("fill", `${fragrance3.innerHTML[0]}`);
-    color2.setAttribute("fill", `${fragrance3.innerHTML[1]}`);
-    color3.setAttribute("fill", `${fragrance3.innerHTML[2]}`);
   } else if (second_candle === true) {
     candle2.innerHTML = `${fragrance3.innerHTML}`;
-    color1.setAttribute("fill", `${fragrance3.innerHTML[0]}`);
-    color2.setAttribute("fill", `${fragrance3.innerHTML[1]}`);
-    color3.setAttribute("fill", `${fragrance3.innerHTML[2]}`);
   } else if (third_candle === true) {
     candle3.innerHTML = `${fragrance3.innerHTML}`;
-    color1.setAttribute("fill", `${fragrance3.innerHTML[0]}`);
-    color2.setAttribute("fill", `${fragrance3.innerHTML[1]}`);
-    color3.setAttribute("fill", `${fragrance3.innerHTML[2]}`);
   } else if (fourth_candle === true) {
     candle4.innerHTML = `${fragrance3.innerHTML}`;
-    color1.setAttribute("fill", `${fragrance3.innerHTML[0]}`);
-    color2.setAttribute("fill", `${fragrance3.innerHTML[1]}`);
-    color3.setAttribute("fill", `${fragrance3.innerHTML[2]}`);
   } else {
     console.log("none of the candles has been chosen");
   }
@@ -430,8 +394,316 @@ function fragranceColor() {
     console.log("toggle color choises");
     const colorChoises = document.querySelector("#option_color_choises");
     colorChoises.classList.remove("hide");
-  });
 
+    if (
+      candle1.innerHTML === `${fragrance1.innerHTML}` ||
+      candle2.innerHTML === `${fragrance1.innerHTML}` ||
+      candle3.innerHTML === `${fragrance1.innerHTML}` ||
+      candle4.innerHTML === `${fragrance1.innerHTML}`
+    ) {
+      console.log(`${fragrance1.innerHTML}`);
+
+      let fragranceColor1 = fragrance1.innerHTML.substring(0).toLowerCase();
+      console.log(`${fragranceColor1}`);
+
+      if (fragranceColor1 === "lemon") {
+        console.log("lemon has been chosen");
+        console.log(`${lemon[0]}`);
+        color1.setAttribute("fill", `${lemon[0]}`);
+        color2.setAttribute("fill", `${lemon[1]}`);
+        color3.setAttribute("fill", `${lemon[2]}`);
+      } else if (fragranceColor1 === "rosemary") {
+        console.log("rosemary has been chosen");
+        color1.setAttribute("fill", `${rosemary[0]}`);
+        color2.setAttribute("fill", `${rosemary[1]}`);
+        color3.setAttribute("fill", `${rosemary[2]}`);
+      } else if (fragranceColor1 === "orange") {
+        console.log("orange has been chosen");
+        color1.setAttribute("fill", `${orange[0]}`);
+        color2.setAttribute("fill", `${orange[1]}`);
+        color3.setAttribute("fill", `${orange[2]}`);
+      } else if (fragranceColor1 === "jasmine") {
+        console.log("jasmine has been chosen");
+        color1.setAttribute("fill", `${jasmine[0]}`);
+        color2.setAttribute("fill", `${jasmine[1]}`);
+        color3.setAttribute("fill", `${jasmine[2]}`);
+      } else if (fragranceColor1 === "lavender") {
+        console.log("lavender has been chosen");
+        color1.setAttribute("fill", `${lavender[0]}`);
+        color2.setAttribute("fill", `${lavender[1]}`);
+        color3.setAttribute("fill", `${lavender[2]}`);
+      } else if (fragranceColor1 === "sandalwood") {
+        console.log("sandalwood has been chosen");
+        color1.setAttribute("fill", `${sandalwood[0]}`);
+        color2.setAttribute("fill", `${sandalwood[1]}`);
+        color3.setAttribute("fill", `${sandalwood[2]}`);
+      } else if (fragranceColor1 === "mint") {
+        console.log("mint has been chosen");
+        color1.setAttribute("fill", `${mint[0]}`);
+        color2.setAttribute("fill", `${mint[1]}`);
+        color3.setAttribute("fill", `${mint[2]}`);
+      } else if (fragranceColor1 === "rose") {
+        console.log("rose has been chosen");
+        color1.setAttribute("fill", `${rose[0]}`);
+        color2.setAttribute("fill", `${rose[1]}`);
+        color3.setAttribute("fill", `${rose[2]}`);
+      } else if (fragranceColor1 === "elderflower") {
+        console.log("elderflower has been chosen");
+        color1.setAttribute("fill", `${elderflower[0]}`);
+        color2.setAttribute("fill", `${elderflower[1]}`);
+        color3.setAttribute("fill", `${elderflower[2]}`);
+      } else if (fragranceColor1 === "spruce") {
+        console.log("spruce has been chosen");
+        color1.setAttribute("fill", `${spruce[0]}`);
+        color2.setAttribute("fill", `${spruce[1]}`);
+        color3.setAttribute("fill", `${spruce[2]}`);
+      } else if (fragranceColor1 === "patchouli") {
+        console.log("patchouli has been chosen");
+        color1.setAttribute("fill", `${patchouli[0]}`);
+        color2.setAttribute("fill", `${patchouli[1]}`);
+        color3.setAttribute("fill", `${patchouli[2]}`);
+      } else if (fragranceColor1 === "ginger") {
+        console.log("ginger has been chosen");
+        color1.setAttribute("fill", `${ginger[0]}`);
+        color2.setAttribute("fill", `${ginger[1]}`);
+        color3.setAttribute("fill", `${ginger[2]}`);
+      } else if (fragranceColor1 === "coriander") {
+        console.log("coriander has been chosen");
+        color1.setAttribute("fill", `${coriander[0]}`);
+        color2.setAttribute("fill", `${coriander[1]}`);
+        color3.setAttribute("fill", `${coriander[2]}`);
+      } else if (fragranceColor1 === "basil") {
+        console.log("basil has been chosen");
+        color1.setAttribute("fill", `${basil[0]}`);
+        color2.setAttribute("fill", `${basil[1]}`);
+        color3.setAttribute("fill", `${basil[2]}`);
+      } else if (fragranceColor1 === "sage") {
+        console.log("sage has been chosen");
+        color1.setAttribute("fill", `${sage[0]}`);
+        color2.setAttribute("fill", `${sage[1]}`);
+        color3.setAttribute("fill", `${sage[2]}`);
+      } else if (fragranceColor1 === "eucalyptus") {
+        console.log("eucalyptus has been chosen");
+        color1.setAttribute("fill", `${eucalyptus[0]}`);
+        color2.setAttribute("fill", `${eucalyptus[1]}`);
+        color3.setAttribute("fill", `${eucalyptus[2]}`);
+      } else if (fragranceColor1 === "cedar") {
+        console.log("cedar has been chosen");
+        color1.setAttribute("fill", `${cedar[0]}`);
+        color2.setAttribute("fill", `${cedar[1]}`);
+        color3.setAttribute("fill", `${cedar[2]}`);
+      } else if (fragranceColor1 === "citrus") {
+        console.log("citrus has been chosen");
+        color1.setAttribute("fill", `${citrus[0]}`);
+        color2.setAttribute("fill", `${citrus[1]}`);
+        color3.setAttribute("fill", `${citrus[2]}`);
+      }
+    } else if (
+      candle1.innerHTML === `${fragrance2.innerHTML}` ||
+      candle2.innerHTML === `${fragrance2.innerHTML}` ||
+      candle3.innerHTML === `${fragrance2.innerHTML}` ||
+      candle4.innerHTML === `${fragrance2.innerHTML}`
+    ) {
+      console.log(`${fragrance2.innerHTML}`);
+      let fragranceColor2 = fragrance2.innerHTML.substring(0).toLowerCase();
+      console.log(`${fragranceColor2}`);
+
+      if (fragranceColor2 === "lemon") {
+        console.log("lemon has been chosen");
+        console.log(`${lemon[0]}`);
+        color1.setAttribute("fill", `${lemon[0]}`);
+        color2.setAttribute("fill", `${lemon[1]}`);
+        color3.setAttribute("fill", `${lemon[2]}`);
+      } else if (fragranceColor2 === "rosemary") {
+        console.log("rosemary has been chosen");
+        color1.setAttribute("fill", `${rosemary[0]}`);
+        color2.setAttribute("fill", `${rosemary[1]}`);
+        color3.setAttribute("fill", `${rosemary[2]}`);
+      } else if (fragranceColor2 === "orange") {
+        console.log("orange has been chosen");
+        color1.setAttribute("fill", `${orange[0]}`);
+        color2.setAttribute("fill", `${orange[1]}`);
+        color3.setAttribute("fill", `${orange[2]}`);
+      } else if (fragranceColor2 === "jasmine") {
+        console.log("jasmine has been chosen");
+        color1.setAttribute("fill", `${jasmine[0]}`);
+        color2.setAttribute("fill", `${jasmine[1]}`);
+        color3.setAttribute("fill", `${jasmine[2]}`);
+      } else if (fragranceColor2 === "lavender") {
+        console.log("lavender has been chosen");
+        color1.setAttribute("fill", `${lavender[0]}`);
+        color2.setAttribute("fill", `${lavender[1]}`);
+        color3.setAttribute("fill", `${lavender[2]}`);
+      } else if (fragranceColor2 === "sandalwood") {
+        console.log("sandalwood has been chosen");
+        color1.setAttribute("fill", `${sandalwood[0]}`);
+        color2.setAttribute("fill", `${sandalwood[1]}`);
+        color3.setAttribute("fill", `${sandalwood[2]}`);
+      } else if (fragranceColor2 === "mint") {
+        console.log("mint has been chosen");
+        color1.setAttribute("fill", `${mint[0]}`);
+        color2.setAttribute("fill", `${mint[1]}`);
+        color3.setAttribute("fill", `${mint[2]}`);
+      } else if (fragranceColor2 === "rose") {
+        console.log("rose has been chosen");
+        color1.setAttribute("fill", `${rose[0]}`);
+        color2.setAttribute("fill", `${rose[1]}`);
+        color3.setAttribute("fill", `${rose[2]}`);
+      } else if (fragranceColor2 === "elderflower") {
+        console.log("elderflower has been chosen");
+        color1.setAttribute("fill", `${elderflower[0]}`);
+        color2.setAttribute("fill", `${elderflower[1]}`);
+        color3.setAttribute("fill", `${elderflower[2]}`);
+      } else if (fragranceColor2 === "spruce") {
+        console.log("spruce has been chosen");
+        color1.setAttribute("fill", `${spruce[0]}`);
+        color2.setAttribute("fill", `${spruce[1]}`);
+        color3.setAttribute("fill", `${spruce[2]}`);
+      } else if (fragranceColor2 === "patchouli") {
+        console.log("patchouli has been chosen");
+        color1.setAttribute("fill", `${patchouli[0]}`);
+        color2.setAttribute("fill", `${patchouli[1]}`);
+        color3.setAttribute("fill", `${patchouli[2]}`);
+      } else if (fragranceColor2 === "ginger") {
+        console.log("ginger has been chosen");
+        color1.setAttribute("fill", `${ginger[0]}`);
+        color2.setAttribute("fill", `${ginger[1]}`);
+        color3.setAttribute("fill", `${ginger[2]}`);
+      } else if (fragranceColor2 === "coriander") {
+        console.log("coriander has been chosen");
+        color1.setAttribute("fill", `${coriander[0]}`);
+        color2.setAttribute("fill", `${coriander[1]}`);
+        color3.setAttribute("fill", `${coriander[2]}`);
+      } else if (fragranceColor2 === "basil") {
+        console.log("basil has been chosen");
+        color1.setAttribute("fill", `${basil[0]}`);
+        color2.setAttribute("fill", `${basil[1]}`);
+        color3.setAttribute("fill", `${basil[2]}`);
+      } else if (fragranceColor2 === "sage") {
+        console.log("sage has been chosen");
+        color1.setAttribute("fill", `${sage[0]}`);
+        color2.setAttribute("fill", `${sage[1]}`);
+        color3.setAttribute("fill", `${sage[2]}`);
+      } else if (fragranceColor2 === "eucalyptus") {
+        console.log("eucalyptus has been chosen");
+        color1.setAttribute("fill", `${eucalyptus[0]}`);
+        color2.setAttribute("fill", `${eucalyptus[1]}`);
+        color3.setAttribute("fill", `${eucalyptus[2]}`);
+      } else if (fragranceColor2 === "cedar") {
+        console.log("cedar has been chosen");
+        color1.setAttribute("fill", `${cedar[0]}`);
+        color2.setAttribute("fill", `${cedar[1]}`);
+        color3.setAttribute("fill", `${cedar[2]}`);
+      } else if (fragranceColor2 === "citrus") {
+        console.log("citrus has been chosen");
+        color1.setAttribute("fill", `${citrus[0]}`);
+        color2.setAttribute("fill", `${citrus[1]}`);
+        color3.setAttribute("fill", `${citrus[2]}`);
+      }
+    } else if (
+      candle1.innerHTML === `${fragrance3.innerHTML}` ||
+      candle2.innerHTML === `${fragrance3.innerHTML}` ||
+      candle3.innerHTML === `${fragrance3.innerHTML}` ||
+      candle4.innerHTML === `${fragrance3.innerHTML}`
+    ) {
+      console.log(`${fragrance3.innerHTML}`);
+      let fragranceColor3 = fragrance3.innerHTML.substring(0).toLowerCase();
+      console.log(`${fragranceColor3}`);
+
+      if (fragranceColor3 === "lemon") {
+        console.log("lemon has been chosen");
+        console.log(`${lemon[0]}`);
+        color1.setAttribute("fill", `${lemon[0]}`);
+        color2.setAttribute("fill", `${lemon[1]}`);
+        color3.setAttribute("fill", `${lemon[2]}`);
+      } else if (fragranceColor3 === "rosemary") {
+        console.log("rosemary has been chosen");
+        color1.setAttribute("fill", `${rosemary[0]}`);
+        color2.setAttribute("fill", `${rosemary[1]}`);
+        color3.setAttribute("fill", `${rosemary[2]}`);
+      } else if (fragranceColor3 === "orange") {
+        console.log("orange has been chosen");
+        color1.setAttribute("fill", `${orange[0]}`);
+        color2.setAttribute("fill", `${orange[1]}`);
+        color3.setAttribute("fill", `${orange[2]}`);
+      } else if (fragranceColor3 === "jasmine") {
+        console.log("jasmine has been chosen");
+        color1.setAttribute("fill", `${jasmine[0]}`);
+        color2.setAttribute("fill", `${jasmine[1]}`);
+        color3.setAttribute("fill", `${jasmine[2]}`);
+      } else if (fragranceColor3 === "lavender") {
+        console.log("lavender has been chosen");
+        color1.setAttribute("fill", `${lavender[0]}`);
+        color2.setAttribute("fill", `${lavender[1]}`);
+        color3.setAttribute("fill", `${lavender[2]}`);
+      } else if (fragranceColor3 === "sandalwood") {
+        console.log("sandalwood has been chosen");
+        color1.setAttribute("fill", `${sandalwood[0]}`);
+        color2.setAttribute("fill", `${sandalwood[1]}`);
+        color3.setAttribute("fill", `${sandalwood[2]}`);
+      } else if (fragranceColor3 === "mint") {
+        console.log("mint has been chosen");
+        color1.setAttribute("fill", `${mint[0]}`);
+        color2.setAttribute("fill", `${mint[1]}`);
+        color3.setAttribute("fill", `${mint[2]}`);
+      } else if (fragranceColor3 === "rose") {
+        console.log("rose has been chosen");
+        color1.setAttribute("fill", `${rose[0]}`);
+        color2.setAttribute("fill", `${rose[1]}`);
+        color3.setAttribute("fill", `${rose[2]}`);
+      } else if (fragranceColor3 === "elderflower") {
+        console.log("elderflower has been chosen");
+        color1.setAttribute("fill", `${elderflower[0]}`);
+        color2.setAttribute("fill", `${elderflower[1]}`);
+        color3.setAttribute("fill", `${elderflower[2]}`);
+      } else if (fragranceColor3 === "spruce") {
+        console.log("spruce has been chosen");
+        color1.setAttribute("fill", `${spruce[0]}`);
+        color2.setAttribute("fill", `${spruce[1]}`);
+        color3.setAttribute("fill", `${spruce[2]}`);
+      } else if (fragranceColor3 === "patchouli") {
+        console.log("patchouli has been chosen");
+        color1.setAttribute("fill", `${patchouli[0]}`);
+        color2.setAttribute("fill", `${patchouli[1]}`);
+        color3.setAttribute("fill", `${patchouli[2]}`);
+      } else if (fragranceColor3 === "ginger") {
+        console.log("ginger has been chosen");
+        color1.setAttribute("fill", `${ginger[0]}`);
+        color2.setAttribute("fill", `${ginger[1]}`);
+        color3.setAttribute("fill", `${ginger[2]}`);
+      } else if (fragranceColor3 === "coriander") {
+        console.log("coriander has been chosen");
+        color1.setAttribute("fill", `${coriander[0]}`);
+        color2.setAttribute("fill", `${coriander[1]}`);
+        color3.setAttribute("fill", `${coriander[2]}`);
+      } else if (fragranceColor3 === "basil") {
+        console.log("basil has been chosen");
+        color1.setAttribute("fill", `${basil[0]}`);
+        color2.setAttribute("fill", `${basil[1]}`);
+        color3.setAttribute("fill", `${basil[2]}`);
+      } else if (fragranceColor3 === "sage") {
+        console.log("sage has been chosen");
+        color1.setAttribute("fill", `${sage[0]}`);
+        color2.setAttribute("fill", `${sage[1]}`);
+        color3.setAttribute("fill", `${sage[2]}`);
+      } else if (fragranceColor3 === "eucalyptus") {
+        console.log("eucalyptus has been chosen");
+        color1.setAttribute("fill", `${eucalyptus[0]}`);
+        color2.setAttribute("fill", `${eucalyptus[1]}`);
+        color3.setAttribute("fill", `${eucalyptus[2]}`);
+      } else if (fragranceColor3 === "cedar") {
+        console.log("cedar has been chosen");
+        color1.setAttribute("fill", `${cedar[0]}`);
+        color2.setAttribute("fill", `${cedar[1]}`);
+        color3.setAttribute("fill", `${cedar[2]}`);
+      } else if (fragranceColor3 === "citrus") {
+        console.log("citrus has been chosen");
+        color1.setAttribute("fill", `${citrus[0]}`);
+        color2.setAttribute("fill", `${citrus[1]}`);
+        color3.setAttribute("fill", `${citrus[2]}`);
+      }
+    }
+  });
   document.querySelector(".color1").addEventListener("click", setColorOne);
   document.querySelector(".color2").addEventListener("click", setColorTwo);
   document.querySelector(".color3").addEventListener("click", setColorThree);
@@ -440,28 +712,89 @@ function fragranceColor() {
 
 function setColorOne() {
   console.log("color1");
-  document.querySelector("#light_x5F_one").style.fill = color1.getAttribute(
-    "fill"
-  );
+  if (first_candle === true) {
+    document.querySelector("#light_x5F_one").style.fill = color1.getAttribute(
+      "fill"
+    );
+  } else if (second_candle === true) {
+    document.querySelector("#light_x5F_two").style.fill = color1.getAttribute(
+      "fill"
+    );
+  } else if (third_candle === true) {
+    document.querySelector("#light_x5F_three").style.fill = color1.getAttribute(
+      "fill"
+    );
+  } else if (fourth_candle === true) {
+    document.querySelector("#light_x5F_four").style.fill = color1.getAttribute(
+      "fill"
+    );
+  } else {
+    console.log("setColorONE error");
+  }
 }
 
 function setColorTwo() {
-  console.log("color2");
-  document.querySelector("#light_x5F_one").style.fill = color2.getAttribute(
-    "fill"
-  );
+  if (first_candle === true) {
+    document.querySelector("#light_x5F_one").style.fill = color2.getAttribute(
+      "fill"
+    );
+  } else if (second_candle === true) {
+    document.querySelector("#light_x5F_two").style.fill = color2.getAttribute(
+      "fill"
+    );
+  } else if (third_candle === true) {
+    document.querySelector("#light_x5F_three").style.fill = color2.getAttribute(
+      "fill"
+    );
+  } else if (fourth_candle === true) {
+    document.querySelector("#light_x5F_four").style.fill = color2.getAttribute(
+      "fill"
+    );
+  } else {
+    console.log("setColorONE error");
+  }
 }
 
 function setColorThree() {
-  console.log("color3");
-  document.querySelector("#light_x5F_one").style.fill = color3.getAttribute(
-    "fill"
-  );
+  if (first_candle === true) {
+    document.querySelector("#light_x5F_one").style.fill = color3.getAttribute(
+      "fill"
+    );
+  } else if (second_candle === true) {
+    document.querySelector("#light_x5F_two").style.fill = color3.getAttribute(
+      "fill"
+    );
+  } else if (third_candle === true) {
+    document.querySelector("#light_x5F_three").style.fill = color3.getAttribute(
+      "fill"
+    );
+  } else if (fourth_candle === true) {
+    document.querySelector("#light_x5F_four").style.fill = color3.getAttribute(
+      "fill"
+    );
+  } else {
+    console.log("setColorONE error");
+  }
 }
 
 function setColorFour() {
-  console.log("color4");
-  document.querySelector("#light_x5F_one").style.fill = color4.getAttribute(
-    "fill"
-  );
+  if (first_candle === true) {
+    document.querySelector("#light_x5F_one").style.fill = color4.getAttribute(
+      "fill"
+    );
+  } else if (second_candle === true) {
+    document.querySelector("#light_x5F_two").style.fill = color4.getAttribute(
+      "fill"
+    );
+  } else if (third_candle === true) {
+    document.querySelector("#light_x5F_three").style.fill = color4.getAttribute(
+      "fill"
+    );
+  } else if (fourth_candle === true) {
+    document.querySelector("#light_x5F_four").style.fill = color4.getAttribute(
+      "fill"
+    );
+  } else {
+    console.log("setColorONE error");
+  }
 }
