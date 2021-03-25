@@ -72,6 +72,8 @@ button:focus {
 #product_preview .zodiac_feature {
   position: absolute;
   width: 95vw;
+  margin-top: 10vh;
+  top: 0;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -92,6 +94,31 @@ button:focus {
 @media only screen and (min-width: 1000px) {
   #candle {
     width: 50vw;
+  }
+}
+
+#selected_fragrances {
+  display: flex;
+  width: 75vw;
+  margin-top: -17%;
+  margin-left: 10%;
+  position: absolute;
+}
+
+@media only screen and (min-width: 1000px) {
+  #selected_fragrances {
+    width: 40vw;
+    margin-top: -17%;
+  }
+}
+
+#selected_fragrances h3 {
+  font-size: 0.5rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  #selected_fragrances h3 {
+    font-size: 0.9rem;
   }
 }
 
