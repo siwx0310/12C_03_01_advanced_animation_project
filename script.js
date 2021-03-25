@@ -48,6 +48,14 @@ const features = {
   capricorn4: false,
 };
 
+let activeCandle;
+let candleArray = [
+  document.querySelector("#first_candle"),
+  document.querySelector("#second_candle"),
+  document.querySelector("#third_candle"),
+  document.querySelector("#fourth_candle"),
+];
+
 let fragrance1 = document.querySelector("#fragrance1");
 let fragrance2 = document.querySelector("#fragrance2");
 let fragrance3 = document.querySelector("#fragrance3");
@@ -107,6 +115,7 @@ async function start() {
   let mySvgData = await response.text();
   document.querySelector("#candle").innerHTML = mySvgData;
   // register toggle-clicks
+
   document
     .querySelectorAll(".option_zodiac")
     .forEach((option) => option.addEventListener("click", toggleOptionZodiac));
@@ -149,9 +158,26 @@ function userInteractionOnButtons() {
     if (first_candle != true) {
       first_candle = true;
       console.log(`1 = ${first_candle}`);
+      activeCandle = 0;
 
       document.querySelector("#first_zodiac_label").classList.remove("hide");
       document.querySelector("#first_candle").style.backgroundColor = "#32a852";
+
+      second_candle = false;
+      console.log(`2 = ${second_candle}`);
+      document.querySelector("#second_zodiac_label").classList.add("hide");
+      document.querySelector("#second_candle").style.backgroundColor = "#EEE";
+
+      third_candle = false;
+      console.log(`3 = ${third_candle}`);
+      document.querySelector("#third_zodiac_label").classList.add("hide");
+      document.querySelector("#third_candle").style.backgroundColor = "#EEE";
+
+      fourth_candle = false;
+      console.log(`4 = ${fourth_candle}`);
+
+      document.querySelector("#fourth_zodiac_label").classList.add("hide");
+      document.querySelector("#fourth_candle").style.backgroundColor = "#EEE";
     } else {
       document.querySelector("#first_zodiac_label").classList.add("hide");
       document.querySelector("#first_candle").style.backgroundColor = "#EEE";
@@ -164,10 +190,28 @@ function userInteractionOnButtons() {
     if (second_candle != true) {
       second_candle = true;
       console.log(`2 = ${second_candle}`);
+      activeCandle = 1;
 
       document.querySelector("#second_zodiac_label").classList.remove("hide");
       document.querySelector("#second_candle").style.backgroundColor =
         "#32a852";
+
+      first_candle = false;
+      console.log(`1 = ${first_candle}`);
+      document.querySelector("#first_zodiac_label").classList.add("hide");
+      document.querySelector("#first_candle").style.backgroundColor = "#EEE";
+
+      third_candle = false;
+      console.log(`3 = ${third_candle}`);
+
+      document.querySelector("#third_zodiac_label").classList.add("hide");
+      document.querySelector("#third_candle").style.backgroundColor = "#EEE";
+
+      fourth_candle = false;
+      console.log(`4 = ${fourth_candle}`);
+
+      document.querySelector("#fourth_zodiac_label").classList.add("hide");
+      document.querySelector("#fourth_candle").style.backgroundColor = "#EEE";
     } else {
       second_candle = false;
       console.log(`2 = ${second_candle}`);
@@ -181,9 +225,26 @@ function userInteractionOnButtons() {
     if (third_candle != true) {
       third_candle = true;
       console.log(`3 = ${third_candle}`);
+      activeCandle = 2;
 
       document.querySelector("#third_zodiac_label").classList.remove("hide");
       document.querySelector("#third_candle").style.backgroundColor = "#32a852";
+
+      first_candle = false;
+      console.log(`1 = ${first_candle}`);
+      document.querySelector("#first_zodiac_label").classList.add("hide");
+      document.querySelector("#first_candle").style.backgroundColor = "#EEE";
+
+      second_candle = false;
+      console.log(`2 = ${second_candle}`);
+      document.querySelector("#second_zodiac_label").classList.add("hide");
+      document.querySelector("#second_candle").style.backgroundColor = "#EEE";
+
+      fourth_candle = false;
+      console.log(`4 = ${fourth_candle}`);
+
+      document.querySelector("#fourth_zodiac_label").classList.add("hide");
+      document.querySelector("#fourth_candle").style.backgroundColor = "#EEE";
     } else {
       third_candle = false;
       console.log(`3 = ${third_candle}`);
@@ -197,10 +258,27 @@ function userInteractionOnButtons() {
     if (fourth_candle != true) {
       fourth_candle = true;
       console.log(`4 = ${fourth_candle}`);
+      activeCandle = 3;
 
       document.querySelector("#fourth_zodiac_label").classList.remove("hide");
       document.querySelector("#fourth_candle").style.backgroundColor =
         "#32a852";
+
+      first_candle = false;
+      console.log(`1 = ${first_candle}`);
+      document.querySelector("#first_zodiac_label").classList.add("hide");
+      document.querySelector("#first_candle").style.backgroundColor = "#EEE";
+
+      second_candle = false;
+      console.log(`2 = ${second_candle}`);
+      document.querySelector("#second_zodiac_label").classList.add("hide");
+      document.querySelector("#second_candle").style.backgroundColor = "#EEE";
+
+      third_candle = false;
+      console.log(`3 = ${third_candle}`);
+
+      document.querySelector("#third_zodiac_label").classList.add("hide");
+      document.querySelector("#third_candle").style.backgroundColor = "#EEE";
     } else {
       fourth_candle = false;
       console.log(`4 = ${fourth_candle}`);
@@ -241,20 +319,19 @@ function toggleOptionZodiac(event) {
     // TODO: - mark target as chosen (add class "chosen")
 
     // - un-hide the feature-layer(s) in the #product-preview;
-    console.log(`${feature}`);
+
     document
       .querySelector(`[data-feature="${feature}"`)
       .classList.remove("hide");
+
+    console.log("TARGET ", target.parentElement);
 
     // TODO: display selected zodiac feature fragrance
     if (feature.includes("leo")) {
       console.log("feature = leo");
       fragrance1.innerHTML = `${leoFragrance[0]}`;
-      fragrance1.setAttribute("data-feature", "fragrance1leo");
       fragrance2.innerHTML = `${leoFragrance[1]}`;
-      fragrance2.setAttribute("data-feature", "fragrance2leo");
       fragrance3.innerHTML = `${leoFragrance[2]}`;
-      fragrance3.setAttribute("data-feature", "fragrance3leo");
     } else if (feature.includes("virgo")) {
       console.log("feature = virgo");
       fragrance1.innerHTML = `${virgoFragrance[0]}`;

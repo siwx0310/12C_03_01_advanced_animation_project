@@ -229,3 +229,7 @@ button:focus {
 .choise {
   background-color: #cfcfcf;
 }
+
+.active {
+  z-index: 5;
+}
